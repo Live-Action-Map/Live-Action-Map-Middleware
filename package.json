@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/Live-Action-Map/Live-Action-Map-Middleware#readme",
   "dependencies": {
+    "cli-color": "^2.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "mongodb": "^4.6.0",
     "node-cron": "^3.0.0",
     "swagger-jsdoc": "^6.2.1",
     "swagger-ui-express": "^4.4.0"
