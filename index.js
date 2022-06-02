@@ -36,10 +36,12 @@ const openapiSpecification = swaggerJsdoc(apiInfo);
 
 let zones = []
 let markers = []
+let contributors = []
 
 async function readDB() {
     zones = await db.read("zones")
     markers = await db.read("tweets")
+    contributors = await db.read("contributors")
 }
 
 
@@ -67,6 +69,9 @@ app.get("/api/zones", (req, res) => {
     res.status(200).send(zones)
 })
 
+app.get("/api/contributors", (req, res) => {
+    res.status(200).send(contributors)
+})
 
 
 app.listen(port, () => {
