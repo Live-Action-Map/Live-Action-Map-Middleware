@@ -45,7 +45,7 @@ async function readDB() {
 }
 
 
-cron.schedule('*/5 0 * * 0', () => {
+cron.schedule('*/5 0 * * *', () => {
     readDB()
 });
 
