@@ -1,6 +1,6 @@
 // ==== 
 require('dotenv').config()
-const logger = require("./modules/logger")
+const logger = require("@bunnylogger/bunnylogger")
 const express = require('express');
 const app = express()
 const port = process.env.SERVER_PORT || 3000
@@ -75,5 +75,5 @@ app.get("/api/contributors", (req, res) => {
 
 
 app.listen(port, () => {
-    logger.start(process.env.SERVER_IP, process.env.SERVER_PORT)
+    logger.start(`Server running on ${process.env.SERVER_IP}:${process.env.SERVER_PORT}`)
 })
